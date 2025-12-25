@@ -14,6 +14,9 @@ let timeManager = {
       this.st = time;
       
     deltaTime = (time - this.st) / 1000;
+    
+    if(deltaTime > 2) deltaTime = 1 / 30;
+    
     this.time += deltaTime;
     
     this.st = time;
@@ -191,6 +194,6 @@ function loop() {
   "FPS: " + Math.round(1 / timeManager.aveDT * 100) / 100 + 
 "\nEmbers: " + embers.length +
 "\nRockets: " + rockets.length +  
-"\nDraws: "
+"\nDraws: " + 
    drawProfile;
 }
